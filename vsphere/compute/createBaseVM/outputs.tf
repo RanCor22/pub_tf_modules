@@ -42,3 +42,8 @@ output "vm_template_uuid" {
   description = "The UUID of the template used to clone the virtual machine"
   value       = vsphere_virtual_machine.vm.clone.0.template_uuid
 }
+
+output "vm_ip_address" {
+  description = "The IP address of the virtual machine"
+  value       = vsphere_virtual_machine.vm.guest_ip_addresses[0]
+}
